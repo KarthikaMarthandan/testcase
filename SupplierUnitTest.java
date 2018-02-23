@@ -35,8 +35,8 @@ public class SupplierUnitTest
 	{
 		Supplier supplier=new Supplier();
 		supplier.setsupplierId(3);
-		supplier.setsupplierName("Karthii");
-		supplier.setSupplierDesc("BAGS R MORE FLEXIBLE");
+		supplier.setsupplierName("EBAY");
+		supplier.setSupplierDesc("It will be delivered  with in 5 working days & also easy return");
 		assertTrue("Problem in Supplier Insertion",supplierDAO.addSupplier(supplier));
 	}
 	
@@ -56,12 +56,14 @@ public class SupplierUnitTest
 	}
 */
   @Transactional
-  @Ignore
+
 	@Test
 	public void updateSupplierTest()
 	{
 		Supplier supplier=supplierDAO.getSupplier(1);
-		supplier.setsupplierName("SKY BAG");
+		supplier.setsupplierId(5);
+		supplier.setsupplierName("flipkart");
+		supplier.setSupplierDesc("OFFERS ARE AVAILABLE");
 		assertTrue("Problem in Updation",supplierDAO.updateSupplier(supplier));
 	}
 	

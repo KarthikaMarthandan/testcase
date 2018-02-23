@@ -55,10 +55,14 @@
 		public void updateUserTest()
 		{
 			User user=userDAO.getUser(1);
-			user.setUserName("L Sofa Model");
+			user.setUserId(1);
+			user.setUserName("abi");
+			user.setUserEmailId("revathi.marthandan1224@gmail.com");
+			user.setUserPassword("09876");
+			user.setUserPhoneno("9874231097");
 			assertTrue("Problem in Updation",userDAO.updateUser(user));
 		}
-		
+		@Ignore
 		@Test
 		public void listUnitTest()
 		{

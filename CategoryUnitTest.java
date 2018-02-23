@@ -15,6 +15,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.niit.dao.CategoryDAO;
 import com.niit.model.Category;
 
+
 public class CategoryUnitTest 
 {
 	static CategoryDAO categoryDAO;
@@ -34,9 +35,9 @@ public class CategoryUnitTest
 	public void addCategoryTest()
 	{
 		Category category=new Category();
-		
-		category.setCategoryName("SKY BAGS");
-		category.setCateogryDesc("6.5inch more flexible");
+		category.setCategoryId(2);
+		category.setCategoryName("backy's blog");
+		category.setCateogryDesc(" It is where he puts all his important items when going to school");
 		assertTrue("Problem in Category Insertion",categoryDAO.addCategory(category));
 	}
 	
@@ -60,7 +61,8 @@ public class CategoryUnitTest
 	public void updateCategoryTest()
 	{
 		Category category=categoryDAO.getCategory(1);
-		category.setCategoryName("L Sofa Model");
+		category.setCategoryName("Shoulder Bag");
+		category.setCateogryDesc("The shoulder bag isn't a travel bag on its own per se.");
 		assertTrue("Problem in Updation",categoryDAO.updateCategory(category));
 	}
 	@Ignore
